@@ -1,0 +1,57 @@
+import { Fingerprint, MoonStar, SunMedium } from 'lucide-react'
+
+type Theme = 'dark' | 'light'
+
+type SiteHeaderProps = {
+  theme: Theme
+  onToggleTheme: () => void
+  navigation: Array<{
+    label: string
+    href: string
+  }>
+}
+
+function SiteHeader({ theme, onToggleTheme, navigation }: SiteHeaderProps) {
+  return (
+    <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[rgba(6,16,31,0.72)] backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
+        <a href="#hero" className="flex items-center gap-3">
+          <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,var(--accent),var(--accent-2))] text-slate-950 shadow-[0_16px_40px_rgba(34,197,94,0.22)]">
+            <Fingerprint className="h-5 w-5" />
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[var(--muted)]">
+              The Logic Lab
+            </p>
+            <p className="text-sm font-medium text-[var(--text)]">Smart campus access system</p>
+          </div>
+        </a>
+
+        <nav className="hidden items-center gap-6 text-sm text-[var(--muted)] lg:flex">
+          {navigation.map((item) => (
+            <a key={item.label} href={item.href} className="transition hover:text-[var(--text)]">
+              {item.label}
+            </a>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <span className="hidden items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)] md:inline-flex">
+            <span className="h-2 w-2 rounded-full bg-[var(--accent-2)] shadow-[0_0_0_6px_rgba(34,197,94,0.12)]" />
+            Demo system online
+          </span>
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[rgba(34,197,94,0.35)]"
+            aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+          >
+            {theme === 'dark' ? <SunMedium className="h-5 w-5" /> : <MoonStar className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+    </header>
+  )
+}
+
+export default SiteHeader
