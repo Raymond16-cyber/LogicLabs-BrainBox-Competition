@@ -30,7 +30,7 @@ function HeroSection({
 
           <div className="space-y-6">
             <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl xl:text-7xl">
-              <span className="brand-gradient">Smart Campus Access Powered by NFC</span>
+              <span className="brand-gradient">Smart ID Card System Powered by NFC</span>
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
               The Logic Lab turns student ID cards into a contactless identity layer for attendance,
@@ -139,7 +139,7 @@ function HeroSection({
                         ID card detected
                       </p>
                       <p className="mt-1 text-lg font-semibold text-[var(--text)]">
-                        Jennifer Onluwseyi | 2026/14372
+                        Jennifer Oluwaseyi | 2026/14372
                       </p>
                     </div>
                   </div>

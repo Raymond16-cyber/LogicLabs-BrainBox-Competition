@@ -184,7 +184,7 @@ export const teamRoles: IconCard[] = [
 ]
 
 export const scanRoster = [
-  { name: 'Jennifer Oluwseyi', id: '2026/14372' },
+  { name: 'Jennifer Oluwaseyi', id: '2026/14372' },
   { name: 'John Fadeyi', id: '2019/12345' },
   { name: 'Mitchelle Adeyemi', id: '2020/67890' },
   { name: 'Boy Smooth', id: '2021/11111' },
@@ -192,7 +192,7 @@ export const scanRoster = [
 ]
 
 export const initialScans: ScanRecord[] = [
-  { name: 'Jennifer Oluwseyi', id: '2026/14372', status: 'IN', time: '08:12 AM', gate: 'North Gate' },
+  { name: 'Jennifer Oluwaseyi', id: '2026/14372', status: 'IN', time: '08:12 AM', gate: 'North Gate' },
   { name: 'John Fadeyi', id: '2019/12345', status: 'OUT', time: '08:18 AM', gate: 'Library Exit' },
   { name: 'Mitchelle Adeyemi', id: '2020/67890', status: 'IN', time: '08:21 AM', gate: 'Main Lobby' },
   { name: 'Boy Smooth', id: '2021/11111', status: 'IN', time: '08:24 AM', gate: 'Admin Wing' },
