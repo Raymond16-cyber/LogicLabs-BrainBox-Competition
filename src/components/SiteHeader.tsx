@@ -2,6 +2,11 @@ import { Fingerprint, MoonStar, SunMedium } from 'lucide-react'
 
 type Theme = 'dark' | 'light'
 
+type SessionUser = {
+  name: string
+  email: string
+}
+
 type SiteHeaderProps = {
   theme: Theme
   onToggleTheme: () => void
@@ -9,9 +14,21 @@ type SiteHeaderProps = {
     label: string
     href: string
   }>
+  onOpenLogin: (prefillEmail?: string) => void
+  onOpenRegister: (prefillEmail?: string) => void
+  sessionUser: SessionUser | null
+  onSignOut: () => void
 }
 
-function SiteHeader({ theme, onToggleTheme, navigation }: SiteHeaderProps) {
+function SiteHeader({
+  theme,
+  onToggleTheme,
+  navigation,
+  onOpenLogin,
+  onOpenRegister,
+  sessionUser,
+  onSignOut,
+}: SiteHeaderProps) {
   return (
     <header className="sticky top-0 z-40 border-b border-[var(--border)] bg-[rgba(6,16,31,0.72)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 lg:px-8">
@@ -36,10 +53,39 @@ function SiteHeader({ theme, onToggleTheme, navigation }: SiteHeaderProps) {
         </nav>
 
         <div className="flex items-center gap-3">
-          <span className="hidden items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[var(--muted)] md:inline-flex">
-            <span className="h-2 w-2 rounded-full bg-[var(--accent-2)] shadow-[0_0_0_6px_rgba(34,197,94,0.12)]" />
-            Demo system online
-          </span>
+          {sessionUser ? (
+            <span className="hidden items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-3 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--muted)] md:inline-flex">
+              <span className="h-2 w-2 rounded-full bg-[var(--accent-2)] shadow-[0_0_0_6px_rgba(34,197,94,0.12)]" />
+              Signed in as {sessionUser.name}
+            </span>
+          ) : (
+            <div className="hidden items-center gap-2 md:flex">
+              <button
+                type="button"
+                onClick={() => onOpenLogin()}
+                className="rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[rgba(34,197,94,0.35)]"
+              >
+                Login
+              </button>
+              <button
+                type="button"
+                onClick={() => onOpenRegister()}
+                className="rounded-full bg-[linear-gradient(135deg,var(--accent-2),#7cf7a2)] px-4 py-2 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5"
+              >
+                Register
+              </button>
+            </div>
+          )}
+
+          {sessionUser ? (
+            <button
+              type="button"
+              onClick={onSignOut}
+              className="rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-4 py-2 text-sm font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[rgba(34,197,94,0.35)]"
+            >
+              Sign out
+            </button>
+          ) : null}
           <button
             type="button"
             onClick={onToggleTheme}

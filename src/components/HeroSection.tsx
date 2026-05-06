@@ -10,9 +10,18 @@ type HeroSectionProps = {
     description: string
     icon: LucideIcon
   }>
+  onOpenLogin: () => void
+  onOpenRegister: () => void
 }
 
-function HeroSection({ liveScanTotal, verifiedEntries, accessZones, heroFlowNodes }: HeroSectionProps) {
+function HeroSection({
+  liveScanTotal,
+  verifiedEntries,
+  accessZones,
+  heroFlowNodes,
+  onOpenLogin,
+  onOpenRegister,
+}: HeroSectionProps) {
   return (
     <section id="hero" className="relative">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:px-8 lg:pb-28 lg:pt-20">
@@ -45,6 +54,24 @@ function HeroSection({ liveScanTotal, verifiedEntries, accessZones, heroFlowNode
               Explore System
               <ScanLine className="h-4 w-4 text-[var(--accent-2)]" />
             </a>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-3 text-sm">
+            <span className="text-[var(--muted)]">Already using the demo?</span>
+            <button
+              type="button"
+              onClick={onOpenLogin}
+              className="rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-4 py-2 font-semibold text-[var(--text)] transition hover:-translate-y-0.5 hover:border-[rgba(34,197,94,0.35)]"
+            >
+              Login
+            </button>
+            <button
+              type="button"
+              onClick={onOpenRegister}
+              className="rounded-full bg-[linear-gradient(135deg,var(--accent-2),#7cf7a2)] px-4 py-2 font-semibold text-slate-950 transition hover:-translate-y-0.5"
+            >
+              Register
+            </button>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-3">
