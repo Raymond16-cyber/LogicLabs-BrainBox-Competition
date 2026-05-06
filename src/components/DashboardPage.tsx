@@ -347,7 +347,7 @@ function DashboardPage({
                     </button>
                     <button
                       type="button"
-                      onClick={onOpenLogin}
+                      onClick={() => onOpenLogin()}
                       className="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,var(--accent-2),#7cf7a2)] px-5 py-3.5 text-sm font-semibold text-slate-950 transition hover:-translate-y-0.5"
                     >
                       <Fingerprint className="h-4 w-4" />
