@@ -19,11 +19,16 @@ function FeaturesSection({ features }: FeaturesSectionProps) {
       />
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {features.map((feature) => {
+        {features.map((feature, index) => {
           const Icon = feature.icon
 
           return (
-            <article key={feature.title} className="panel rounded-[2rem] p-6">
+            <article
+              key={feature.title}
+              className="panel rounded-[2rem] p-6"
+              data-aos="fade-up"
+              data-aos-delay={index * 90}
+            >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--surface-soft)] text-[var(--accent-2)]">
                 <Icon className="h-5 w-5" />
               </div>

@@ -20,11 +20,16 @@ function TeamSection({ teamRoles }: TeamSectionProps) {
       />
 
       <div className="grid gap-6 md:grid-cols-3">
-        {teamRoles.map((role) => {
+        {teamRoles.map((role, index) => {
           const Icon = role.icon
 
           return (
-            <article key={role.title} className="panel rounded-[2rem] p-6">
+            <article
+              key={role.title}
+              className="panel rounded-[2rem] p-6"
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
+            >
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--surface-soft)] text-[var(--accent-2)]">
                 <Icon className="h-5 w-5" />
               </div>
@@ -35,7 +40,7 @@ function TeamSection({ teamRoles }: TeamSectionProps) {
         })}
       </div>
 
-      <div className="panel mt-6 rounded-[2rem] p-6">
+      <div className="panel mt-6 rounded-[2rem] p-6" data-aos="fade-up" data-aos-delay="120">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">

@@ -23,11 +23,16 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="space-y-6">
           <div className="grid gap-4 md:grid-cols-2">
-            {comparisonCards.map((card) => {
+            {comparisonCards.map((card, index) => {
               const Icon = card.icon
 
               return (
-                <article key={card.title} className="panel rounded-[2rem] p-6">
+                <article
+                  key={card.title}
+                  className="panel rounded-[2rem] p-6"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                >
                   <div className="flex items-center gap-3">
                     <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[var(--surface-soft)] text-[var(--accent-2)]">
                       <Icon className="h-5 w-5" />
@@ -53,7 +58,7 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
             })}
           </div>
 
-          <div className="panel rounded-[2rem] p-6">
+          <div className="panel rounded-[2rem] p-6" data-aos="fade-up" data-aos-delay="120">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(34,197,94,0.14)] text-[var(--accent-2)]">
                 <Wifi className="h-5 w-5" />
@@ -81,20 +86,20 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
                 </p>
               </div>
 
-              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+              <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="60">
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
                   Live stack
                 </p>
                 <div className="mt-4 space-y-3">
-                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3">
+                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3" data-aos="fade-up">
                     <Fingerprint className="h-4 w-4 text-[var(--accent-2)]" />
                     <span className="text-sm text-[var(--text)]">Access badge</span>
                   </div>
-                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3">
+                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3" data-aos="fade-up" data-aos-delay="90">
                     <Cpu className="h-4 w-4 text-[var(--accent)]" />
                     <span className="text-sm text-[var(--text)]">Arduino controller</span>
                   </div>
-                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3">
+                  <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3" data-aos="fade-up" data-aos-delay="180">
                     <Server className="h-4 w-4 text-[var(--accent-3)]" />
                     <span className="text-sm text-[var(--text)]">Organization web service</span>
                   </div>
@@ -104,7 +109,7 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
           </div>
         </div>
 
-        <div className="panel rounded-[2rem] p-6">
+        <div className="panel rounded-[2rem] p-6" data-aos="fade-left" data-aos-delay="120">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(56,189,248,0.14)] text-[var(--accent-3)]">
               <Clock3 className="h-5 w-5" />
@@ -118,24 +123,24 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
           </div>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-3">
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Tap range</p>
               <p className="mt-3 text-3xl font-semibold text-[var(--text)]">4 cm</p>
               <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Intentional badge check-ins.</p>
             </div>
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="90">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Reader mode</p>
               <p className="mt-3 text-3xl font-semibold text-[var(--text)]">UID</p>
               <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Card identity read from the chip.</p>
             </div>
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="180">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">System</p>
               <p className="mt-3 text-3xl font-semibold text-[var(--text)]">Live</p>
               <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Dashboard updates immediately.</p>
             </div>
           </div>
 
-          <div className="mt-5 rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+          <div className="mt-5 rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="120">
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
               Why it works
             </p>
@@ -144,10 +149,12 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
                 'Teams move faster through entry points.',
                 'Admins get a reliable digital audit trail.',
                 'The hardware can scale from visitor management to access control.',
-              ].map((item) => (
+              ].map((item, index) => (
                 <div
                   key={item}
                   className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4 text-sm leading-6 text-[var(--text)]"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 90}
                 >
                   {item}
                 </div>

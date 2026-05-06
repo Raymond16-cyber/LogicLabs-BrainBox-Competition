@@ -13,7 +13,7 @@ function SiteFooter({ footerLinks }: SiteFooterProps) {
     <footer className="border-t border-[var(--border)] bg-[rgba(6,16,31,0.4)]">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
-          <div>
+          <div data-aos="fade-up">
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[var(--muted)]">
               The Logic Lab
             </p>
@@ -26,8 +26,8 @@ function SiteFooter({ footerLinks }: SiteFooterProps) {
             </p>
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-3">
-            {footerLinks.map((link) => {
+          <div className="grid gap-3 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="120">
+            {footerLinks.map((link, index) => {
               const Icon = link.icon
 
               return (
@@ -37,6 +37,8 @@ function SiteFooter({ footerLinks }: SiteFooterProps) {
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                   className="footer-link"
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 80}
                 >
                   <Icon className="h-4 w-4 text-[var(--accent-2)]" />
                   <span className="text-sm font-medium">{link.label}</span>

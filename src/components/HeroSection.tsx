@@ -25,7 +25,7 @@ function HeroSection({
   return (
     <section id="hero" className="relative">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:px-8 lg:pb-28 lg:pt-20">
-        <div className="space-y-8">
+        <div className="space-y-8" data-aos="fade-right" data-aos-duration="900">
           <span className="section-kicker">Smart enterprise access</span>
 
           <div className="space-y-6">
@@ -74,7 +74,7 @@ function HeroSection({
             </button>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-3" data-aos="fade-up" data-aos-delay="120">
             <div className="stat-chip">
               <div className="flex items-center gap-2 text-[var(--accent-2)]">
                 <BarChart3 className="h-4 w-4" />
@@ -108,12 +108,12 @@ function HeroSection({
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative" data-aos="fade-left" data-aos-duration="900" data-aos-delay="120">
           <div className="float-orb green -left-8 top-10 h-28 w-28" />
           <div className="float-orb purple right-4 top-28 h-36 w-36" />
           <div className="float-orb blue bottom-4 left-20 h-24 w-24" />
 
-          <div className="panel hero-card scan-frame relative rounded-[2rem] p-6 sm:p-8">
+          <div className="panel hero-card scan-frame relative rounded-[2rem] p-6 sm:p-8" data-aos="zoom-in" data-aos-delay="180">
             <div className="relative flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[var(--muted)]">
@@ -149,13 +149,15 @@ function HeroSection({
                 </div>
 
                 <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                  {heroFlowNodes.map((node) => {
+                  {heroFlowNodes.map((node, index) => {
                     const Icon = node.icon
 
                     return (
                       <div
                         key={node.title}
                         className="rounded-2xl border border-[var(--border)] bg-[var(--surface-soft)] p-4"
+                        data-aos="fade-up"
+                        data-aos-delay={index * 100}
                       >
                         <Icon className="h-5 w-5 text-[var(--accent-2)]" />
                         <p className="mt-3 text-sm font-semibold text-[var(--text)]">{node.title}</p>
@@ -166,7 +168,7 @@ function HeroSection({
                 </div>
               </div>
 
-              <div className="rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4 sm:p-5">
+              <div className="rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4 sm:p-5" data-aos="fade-up" data-aos-delay="120">
                 <div className="flex items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <Activity className="h-4 w-4 text-[var(--accent-2)]" />
@@ -176,17 +178,17 @@ function HeroSection({
                 </div>
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4" data-aos="fade-up">
                     <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Access</p>
                     <p className="mt-2 text-2xl font-semibold text-[var(--text)]">Real time</p>
                     <p className="mt-1 text-sm text-[var(--muted)]">Every tap reaches the log instantly.</p>
                   </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4" data-aos="fade-up" data-aos-delay="90">
                     <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Verification</p>
                     <p className="mt-2 text-2xl font-semibold text-[var(--text)]">{verifiedEntries}</p>
                     <p className="mt-1 text-sm text-[var(--muted)]">Approved badge taps tracked today.</p>
                   </div>
-                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+                  <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4" data-aos="fade-up" data-aos-delay="180">
                     <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Latency</p>
                     <p className="mt-2 text-2xl font-semibold text-[var(--text)]">0.8s</p>
                     <p className="mt-1 text-sm text-[var(--muted)]">Reader to dashboard response time.</p>

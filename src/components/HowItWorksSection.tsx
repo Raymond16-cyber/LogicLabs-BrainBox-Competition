@@ -23,7 +23,12 @@ function HowItWorksSection({ flowSteps }: HowItWorksSectionProps) {
           const Icon = step.icon
 
           return (
-            <article key={step.title} className="panel rounded-[2rem] p-5">
+            <article
+              key={step.title}
+              className="panel rounded-[2rem] p-5"
+              data-aos="fade-up"
+              data-aos-delay={index * 90}
+            >
               <div className="flex items-center justify-between gap-4">
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--border)] bg-[var(--surface-soft)] text-sm font-semibold text-[var(--text)]">
                   {index + 1}

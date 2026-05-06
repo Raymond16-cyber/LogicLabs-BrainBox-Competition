@@ -20,7 +20,7 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-        <div className="panel rounded-[2rem] p-6">
+        <div className="panel rounded-[2rem] p-6" data-aos="fade-up">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(34,197,94,0.14)] text-[var(--accent-2)]">
               <Cpu className="h-5 w-5" />
@@ -34,13 +34,15 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
           </div>
 
           <div className="mt-5 grid gap-4 sm:grid-cols-2">
-            {hardwareModules.map((module) => {
+            {hardwareModules.map((module, index) => {
               const Icon = module.icon
 
               return (
                 <article
                   key={module.title}
                   className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 90}
                 >
                   <Icon className="h-5 w-5 text-[var(--accent-2)]" />
                   <h4 className="mt-4 text-lg font-semibold text-[var(--text)]">{module.title}</h4>
@@ -64,10 +66,12 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
                 ['3.3V', 'Power'],
                 ['GND', 'Ground'],
                 ['Relay', 'Door strike'],
-              ].map(([label, value]) => (
+              ].map(([label, value], index) => (
                 <div
                   key={label}
                   className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3"
+                  data-aos="fade-up"
+                  data-aos-delay={index * 60}
                 >
                   <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">{label}</p>
                   <p className="mt-2 text-sm font-semibold text-[var(--text)]">{value}</p>
@@ -77,7 +81,7 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
           </div>
         </div>
 
-        <div className="panel rounded-[2rem] p-6">
+        <div className="panel rounded-[2rem] p-6" data-aos="fade-up" data-aos-delay="120">
           <div className="flex items-center gap-3">
             <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(139,92,246,0.14)] text-[var(--accent)]">
               <Wifi className="h-5 w-5" />
@@ -114,13 +118,15 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
                 { label: 'Read', value: 'NFC / RFID UID', icon: RadioTower },
                 { label: 'Send', value: 'API event payload', icon: Server },
                 { label: 'Update', value: 'Dashboard and logs', icon: LayoutDashboard },
-              ].map((item) => {
+              ].map((item, index) => {
                 const Icon = item.icon
 
                 return (
                   <div
                     key={item.label}
                     className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4"
+                    data-aos="fade-up"
+                    data-aos-delay={index * 80}
                   >
                     <Icon className="h-5 w-5 text-[var(--accent-2)]" />
                     <p className="mt-4 text-xs uppercase tracking-[0.28em] text-[var(--muted)]">{item.label}</p>

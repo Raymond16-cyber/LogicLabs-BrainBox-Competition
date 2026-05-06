@@ -37,7 +37,7 @@ function DemoSection({
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
-        <div className="panel rounded-[2rem] p-6 sm:p-8">
+        <div className="panel rounded-[2rem] p-6 sm:p-8" data-aos="fade-up">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
@@ -52,29 +52,29 @@ function DemoSection({
           </div>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-4">
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Today</p>
               <p className="mt-2 text-2xl font-semibold text-[var(--text)]">{liveScanTotal}</p>
               <p className="mt-2 text-sm text-[var(--muted)]">Access records</p>
             </div>
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="80">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Verified</p>
               <p className="mt-2 text-2xl font-semibold text-[var(--text)]">{verifiedEntries}</p>
               <p className="mt-2 text-sm text-[var(--muted)]">Credential checks</p>
             </div>
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="160">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Alert state</p>
               <p className="mt-2 text-2xl font-semibold text-[var(--text)]">Clear</p>
               <p className="mt-2 text-sm text-[var(--muted)]">No access anomalies detected</p>
             </div>
-            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="240">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Door latency</p>
               <p className="mt-2 text-2xl font-semibold text-[var(--text)]">0.8s</p>
               <p className="mt-2 text-sm text-[var(--muted)]">Scan-to-entry response</p>
             </div>
           </div>
 
-          <div className="mt-6 rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface-soft)] p-5">
+          <div className="mt-6 rounded-[1.75rem] border border-[var(--border)] bg-[var(--surface-soft)] p-5" data-aos="fade-up" data-aos-delay="120">
             <div className="flex items-center justify-between gap-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.32em] text-[var(--muted)]">Current scan</p>
@@ -91,17 +91,17 @@ function DemoSection({
             </div>
 
             <div className="mt-5 grid gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4" data-aos="fade-up">
                 <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Scan time</p>
                 <p className="mt-2 text-lg font-semibold text-[var(--text)]">{currentScan.time}</p>
               </div>
-              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4" data-aos="fade-up" data-aos-delay="90">
                 <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Status</p>
                 <p className="mt-2 text-lg font-semibold text-[var(--text)]">
                   {currentScan.status === 'IN' ? 'Checked In' : 'Checked Out'}
                 </p>
               </div>
-              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4" data-aos="fade-up" data-aos-delay="180">
                 <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Route</p>
                 <p className="mt-2 text-lg font-semibold text-[var(--text)]">{currentScan.gate}</p>
               </div>
@@ -109,10 +109,12 @@ function DemoSection({
           </div>
 
           <div className="mt-6 space-y-3">
-            {scanLog.map((entry) => (
+            {scanLog.map((entry, index) => (
               <div
                 key={`${entry.id}-${entry.time}-${entry.status}`}
                 className="flex items-center justify-between gap-4 rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4"
+                data-aos="fade-up"
+                data-aos-delay={index * 70}
               >
                 <div>
                   <p className="font-semibold text-[var(--text)]">{entry.name}</p>
@@ -132,7 +134,7 @@ function DemoSection({
         </div>
 
         <div className="space-y-6">
-          <div className="panel rounded-[2rem] p-6">
+          <div className="panel rounded-[2rem] p-6" data-aos="fade-left">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(34,197,94,0.14)] text-[var(--accent-2)]">
                 <ScanLine className="h-5 w-5" />
@@ -154,7 +156,7 @@ function DemoSection({
               Scan Simulation
             </button>
 
-            <div className="mt-6 rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
+            <div className="mt-6 rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4" data-aos="fade-up" data-aos-delay="100">
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
                 What changes on scan
               </p>
@@ -175,7 +177,7 @@ function DemoSection({
             </div>
           </div>
 
-          <div className="panel rounded-[2rem] p-6">
+          <div className="panel rounded-[2rem] p-6" data-aos="fade-left" data-aos-delay="120">
             <div className="flex items-center gap-3">
               <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[rgba(56,189,248,0.14)] text-[var(--accent-3)]">
                 <LogIn className="h-5 w-5" />

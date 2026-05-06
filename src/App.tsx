@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import AOS from 'aos'
 import { BellRing } from 'lucide-react'
 import AuthPage from './components/AuthPage'
 import AboutSystemSection from './components/AboutSystemSection'
@@ -182,6 +183,16 @@ function App() {
   }, [theme])
 
   useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 80,
+      mirror: false,
+    })
+  }, [])
+
+  useEffect(() => {
     if (!toast) {
       return undefined
     }
@@ -226,6 +237,12 @@ function App() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+
+    const frameId = window.requestAnimationFrame(() => {
+      AOS.refreshHard()
+    })
+
+    return () => window.cancelAnimationFrame(frameId)
   }, [route])
 
   const currentScan = scanLog[0]
