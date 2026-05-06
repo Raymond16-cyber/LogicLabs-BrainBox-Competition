@@ -163,7 +163,7 @@ function AuthPage({
     onOpenLogin(trimmedEmail)
   }
 
-  const pageTitle = isLogin ? 'Sign in to The Logic Lab' : 'Create your campus access account'
+  const pageTitle = isLogin ? 'Sign in to The Logic Lab' : 'Create your organization access account'
   const pageCopy = isLogin
     ? 'Use the demo account or the account you created from the register page. The flow stays inside the app, so you can jump back to the dashboard when sign-in succeeds.'
     : 'Set up a local demo account and move straight into the login screen. This keeps the auth flow wired to the app without needing a backend.'
@@ -180,7 +180,7 @@ function AuthPage({
               <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[var(--muted)]">
                 The Logic Lab
               </p>
-              <p className="text-sm font-medium text-[var(--text)]">Smart campus access system</p>
+              <p className="text-sm font-medium text-[var(--text)]">Smart enterprise access system</p>
             </div>
           </button>
 

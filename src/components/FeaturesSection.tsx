@@ -14,8 +14,8 @@ function FeaturesSection({ features }: FeaturesSectionProps) {
     <section id="features" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
       <SectionHeading
         eyebrow="Features"
-        title="Built like a real product, not a classroom demo"
-        description="The interface is designed to feel like a campus operations tool: fast scans, clear state, a confident security layer, and data that is easy to act on."
+        title="Built like a real product, not a toy demo"
+        description="The interface is designed to feel like an enterprise operations tool: fast scans, clear state, a confident security layer, and data that is easy to act on."
       />
 
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">

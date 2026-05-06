@@ -16,8 +16,8 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
     <section id="about-system" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
       <SectionHeading
         eyebrow="About the system"
-        title="Simple contactless identity for modern campuses"
-        description="NFC and RFID both identify a card by radio, but they fit different moments in the campus flow. The Logic Lab pairs the hardware with a campus web app so students tap once and the system takes care of the rest."
+        title="Simple contactless identity for modern organizations"
+        description="NFC and RFID both identify a credential by radio, but they fit different moments in the access flow. The Logic Lab pairs the hardware with an organization web app so authorized users tap once and the system takes care of the rest."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
@@ -71,13 +71,13 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
             <div className="mt-5 grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
               <div className="space-y-4 text-sm leading-7 text-[var(--muted)]">
                 <p>
-                  The reader sits at the desk or gate. Arduino reads the UID, the campus web service
-                  receives the event, and the dashboard refreshes with the student name, time, and
-                  access state.
+                  The reader sits at the desk or entry point. Arduino reads the UID, the organization
+                  web service receives the event, and the dashboard refreshes with the user name,
+                  time, and access state.
                 </p>
                 <p>
-                  That same event can drive attendance, entry or exit monitoring, and an automated
-                  identity check for any connected campus workflow.
+                  That same event can drive access control, entry or exit monitoring, and an automated
+                  identity check for any connected organization workflow.
                 </p>
               </div>
 
@@ -88,7 +88,7 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
                 <div className="mt-4 space-y-3">
                   <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3">
                     <Fingerprint className="h-4 w-4 text-[var(--accent-2)]" />
-                    <span className="text-sm text-[var(--text)]">Student ID card</span>
+                    <span className="text-sm text-[var(--text)]">Access badge</span>
                   </div>
                   <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3">
                     <Cpu className="h-4 w-4 text-[var(--accent)]" />
@@ -96,7 +96,7 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
                   </div>
                   <div className="flex items-center gap-3 rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-3">
                     <Server className="h-4 w-4 text-[var(--accent-3)]" />
-                    <span className="text-sm text-[var(--text)]">Campus web service</span>
+                    <span className="text-sm text-[var(--text)]">Organization web service</span>
                   </div>
                 </div>
               </div>
@@ -113,7 +113,7 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
                 The use case
               </p>
-              <h3 className="mt-1 text-2xl font-semibold text-[var(--text)]">Attendance, doors, identity</h3>
+                <h3 className="mt-1 text-2xl font-semibold text-[var(--text)]">Access, doors, identity</h3>
             </div>
           </div>
 
@@ -121,7 +121,7 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
             <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Tap range</p>
               <p className="mt-3 text-3xl font-semibold text-[var(--text)]">4 cm</p>
-              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Intentional student check-ins.</p>
+              <p className="mt-2 text-sm leading-6 text-[var(--muted)]">Intentional badge check-ins.</p>
             </div>
             <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--muted)]">Reader mode</p>
@@ -141,9 +141,9 @@ function AboutSystemSection({ comparisonCards }: AboutSystemSectionProps) {
             </p>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
               {[
-                'Students move faster through entry points.',
+                'Teams move faster through entry points.',
                 'Admins get a reliable digital audit trail.',
-                'The hardware can scale from attendance to access control.',
+                'The hardware can scale from visitor management to access control.',
               ].map((item) => (
                 <div
                   key={item}

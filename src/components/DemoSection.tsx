@@ -33,7 +33,7 @@ function DemoSection({
       <SectionHeading
         eyebrow="Demo / simulation"
         title="A live dashboard preview with scan simulation"
-        description="The mock interface below behaves like a campus operations console. Use the scan button to generate a fresh IN or OUT event, then watch the log and toast update instantly."
+        description="The mock interface below behaves like an organization operations console. Use the scan button to generate a fresh IN or OUT event, then watch the log and toast update instantly."
       />
 
       <div className="grid gap-6 lg:grid-cols-[1.25fr_0.75fr]">
@@ -43,7 +43,7 @@ function DemoSection({
               <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
                 Live dashboard preview
               </p>
-              <h3 className="mt-2 text-2xl font-semibold text-[var(--text)]">Campus activity feed</h3>
+              <h3 className="mt-2 text-2xl font-semibold text-[var(--text)]">Operations activity feed</h3>
             </div>
             <span className="status-chip green">
               <span className="h-2 w-2 rounded-full bg-current" />
@@ -55,12 +55,12 @@ function DemoSection({
             <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Today</p>
               <p className="mt-2 text-2xl font-semibold text-[var(--text)]">{liveScanTotal}</p>
-              <p className="mt-2 text-sm text-[var(--muted)]">Attendance records</p>
+              <p className="mt-2 text-sm text-[var(--muted)]">Access records</p>
             </div>
             <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Verified</p>
               <p className="mt-2 text-2xl font-semibold text-[var(--text)]">{verifiedEntries}</p>
-              <p className="mt-2 text-sm text-[var(--muted)]">Identity checks</p>
+              <p className="mt-2 text-sm text-[var(--muted)]">Credential checks</p>
             </div>
             <div className="rounded-[1.5rem] border border-[var(--border)] bg-[var(--surface-soft)] p-4">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Alert state</p>
@@ -141,7 +141,7 @@ function DemoSection({
                 <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
                   Scan simulation
                 </p>
-                <h3 className="mt-1 text-2xl font-semibold text-[var(--text)]">Generate a campus event</h3>
+                <h3 className="mt-1 text-2xl font-semibold text-[var(--text)]">Generate an access event</h3>
               </div>
             </div>
 
@@ -221,7 +221,7 @@ function DemoSection({
                 Product note
               </p>
               <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-                We made this for demo purposes only. In a real system, the login would be integrated with campus SSO and protected by multi-factor authentication.
+                We made this for demo purposes only. In a real system, the login would be integrated with enterprise SSO and protected by multi-factor authentication.
               </p>
             </div>
           </div>

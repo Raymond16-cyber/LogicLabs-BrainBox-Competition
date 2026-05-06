@@ -41,7 +41,7 @@ function TeamSection({ teamRoles }: TeamSectionProps) {
             <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
               Delivery mindset
             </p>
-            <h3 className="mt-2 text-2xl font-semibold text-[var(--text)]">Engineering smarter campuses</h3>
+            <h3 className="mt-2 text-2xl font-semibold text-[var(--text)]">Engineering smarter organizations</h3>
           </div>
           <div className="flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface-soft)] px-4 py-2 text-sm text-[var(--muted)]">
             <Users className="h-4 w-4 text-[var(--accent-2)]" />

@@ -26,16 +26,16 @@ function HeroSection({
     <section id="hero" className="relative">
       <div className="mx-auto grid max-w-7xl gap-14 px-6 pb-24 pt-14 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:px-8 lg:pb-28 lg:pt-20">
         <div className="space-y-8">
-          <span className="section-kicker">Smart campus access</span>
+          <span className="section-kicker">Smart enterprise access</span>
 
           <div className="space-y-6">
             <h1 className="max-w-4xl text-5xl font-semibold tracking-tight sm:text-6xl xl:text-7xl">
-              <span className="brand-gradient">Smart ID Card System Powered by NFC</span>
+              <span className="brand-gradient">Smart Access System Powered by NFC</span>
             </h1>
             <p className="max-w-2xl text-lg leading-8 text-[var(--muted)] sm:text-xl">
-              The Logic Lab turns student ID cards into a contactless identity layer for attendance,
+              The Logic Lab turns access badges into a contactless identity layer for access control,
               entry and exit monitoring, and automated verification. A tap is enough to update the
-              campus system in real time.
+              organization system in real time.
             </p>
           </div>
 
@@ -83,7 +83,7 @@ function HeroSection({
                 </span>
               </div>
               <p className="stat-value mt-3">{liveScanTotal}</p>
-              <p className="stat-label">Attendance events recorded today</p>
+              <p className="stat-label">Access events recorded today</p>
             </div>
             <div className="stat-chip">
               <div className="flex items-center gap-2 text-[var(--accent)]">
@@ -93,7 +93,7 @@ function HeroSection({
                 </span>
               </div>
               <p className="stat-value mt-3">{accessZones}</p>
-              <p className="stat-label">Entry points and campus doors online</p>
+              <p className="stat-label">Entry points and locations online</p>
             </div>
             <div className="stat-chip">
               <div className="flex items-center gap-2 text-[var(--accent-3)]">
@@ -117,7 +117,7 @@ function HeroSection({
             <div className="relative flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[var(--muted)]">
-                  Campus scan interface
+                  Enterprise access interface
                 </p>
                 <h3 className="mt-3 text-2xl font-semibold text-[var(--text)]">NFC reader connected</h3>
               </div>
@@ -136,7 +136,7 @@ function HeroSection({
                     </div>
                     <div>
                       <p className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--muted)]">
-                        ID card detected
+                        Access badge detected
                       </p>
                       <p className="mt-1 text-lg font-semibold text-[var(--text)]">
                         Jennifer Oluwaseyi | 2026/14372
@@ -177,14 +177,14 @@ function HeroSection({
 
                 <div className="mt-4 grid gap-3 sm:grid-cols-3">
                   <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
-                    <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Attendance</p>
+                    <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Access</p>
                     <p className="mt-2 text-2xl font-semibold text-[var(--text)]">Real time</p>
                     <p className="mt-1 text-sm text-[var(--muted)]">Every tap reaches the log instantly.</p>
                   </div>
                   <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
                     <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Verification</p>
                     <p className="mt-2 text-2xl font-semibold text-[var(--text)]">{verifiedEntries}</p>
-                    <p className="mt-1 text-sm text-[var(--muted)]">Approved card scans tracked today.</p>
+                    <p className="mt-1 text-sm text-[var(--muted)]">Approved badge taps tracked today.</p>
                   </div>
                   <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface-strong)] p-4">
                     <p className="text-xs uppercase tracking-[0.28em] text-[var(--muted)]">Latency</p>

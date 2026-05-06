@@ -48,13 +48,13 @@ type DashboardPageProps = {
 
 const operationsPanels = [
   {
-    title: 'Campus status',
+    title: 'Organization status',
     value: 'All systems green',
     description: 'Network, reader, and audit trail layers are online.',
   },
   {
     title: 'Active users',
-    value: '42 on campus',
+    value: '42 active',
     description: 'Mock figure for this static dashboard preview.',
   },
   {
@@ -238,7 +238,7 @@ function DashboardPage({
                       Recent activity
                     </p>
                     <h2 className="mt-2 text-2xl font-semibold text-[var(--text)]">
-                      Campus scan stream
+                      Activity stream
                     </h2>
                   </div>
                   <span className="status-chip green">

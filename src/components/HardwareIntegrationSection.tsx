@@ -15,8 +15,8 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
     <section id="hardware-integration" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
       <SectionHeading
         eyebrow="Hardware integration"
-        title="Arduino, NFC module, and the web system work as one stack"
-        description="The reader and controller run close to the doorway while the web layer stores the event, updates the dashboard, and keeps the campus data visible for admins."
+        title="ESP32, NFC module, and the web system work as one stack"
+        description="The reader and controller run close to the entry point while the web layer stores the event, updates the dashboard, and keeps the organization data visible for admins."
       />
 
       <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
@@ -95,12 +95,12 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
           <div className="mt-5 space-y-4 text-sm leading-7 text-[var(--muted)]">
             <p>
               The controller reads the card UID, packages a scan event, and sends it to the web layer.
-              The service validates the student, updates attendance or access logs, and refreshes the
+              The service validates the credential, updates access or activity logs, and refreshes the
               admin dashboard.
             </p>
             <p>
-              Because the workflow is event-driven, the same hardware setup can power attendance kiosks,
-              door entry points, and automated identity checks without changing the campus product model.
+              Because the workflow is event-driven, the same hardware setup can power access kiosks,
+              door entry points, and automated identity checks without changing the organization product model.
             </p>
           </div>
 
@@ -110,7 +110,7 @@ function HardwareIntegrationSection({ hardwareModules }: HardwareIntegrationSect
             </p>
             <div className="mt-4 grid gap-3 md:grid-cols-4">
               {[
-                { label: 'Tap', value: 'Student card', icon: Fingerprint },
+                { label: 'Tap', value: 'Access badge', icon: Fingerprint },
                 { label: 'Read', value: 'NFC / RFID UID', icon: RadioTower },
                 { label: 'Send', value: 'API event payload', icon: Server },
                 { label: 'Update', value: 'Dashboard and logs', icon: LayoutDashboard },

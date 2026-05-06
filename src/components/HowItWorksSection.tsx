@@ -14,8 +14,8 @@ function HowItWorksSection({ flowSteps }: HowItWorksSectionProps) {
     <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
       <SectionHeading
         eyebrow="How it works"
-        title="A tap becomes a secure campus event in five steps"
-        description="The flow is intentionally simple: a student taps the card, the reader captures the chip, Arduino forwards the data, and the dashboard records the attendance or entry event without manual logging."
+        title="A tap becomes a secure access event in five steps"
+        description="The flow is intentionally simple: an employee taps the badge, the reader captures the chip, Arduino forwards the data, and the dashboard records the access or entry event without manual logging."
       />
 
       <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">

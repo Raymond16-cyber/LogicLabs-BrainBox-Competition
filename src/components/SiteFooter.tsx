@@ -18,11 +18,11 @@ function SiteFooter({ footerLinks }: SiteFooterProps) {
               The Logic Lab
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-[var(--text)] sm:text-4xl">
-              Engineering smarter campuses.
+              Engineering smarter organizations.
             </h2>
             <p className="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)]">
-              Contact: hello@thelogiclab.dev | Built for a contactless campus future powered by NFC and
-              RFID identity checks.
+              Contact: hello@thelogiclab.dev | Built for a contactless enterprise future powered by NFC
+              and RFID identity badges.
             </p>
           </div>
 
@@ -47,8 +47,9 @@ function SiteFooter({ footerLinks }: SiteFooterProps) {
         </div>
 
         <div className="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-[var(--border)] pt-6 text-sm text-[var(--muted)]">
-          <p>Smart campus access powered by NFC and RFID student ID cards.</p>
+          <p>Smart enterprise access powered by NFC and RFID identity badges.</p>
           <p>Built by The Logic Lab.</p>
+          <p>Copyright © 2026 The Logic Lab. All rights reserved.</p>
         </div>
       </div>
     </footer>

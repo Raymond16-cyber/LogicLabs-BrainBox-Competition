@@ -40,7 +40,7 @@ function SiteHeader({
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[var(--muted)]">
               The Logic Lab
             </p>
-            <p className="text-sm font-medium text-[var(--text)]">Smart campus access system</p>
+            <p className="text-sm font-medium text-[var(--text)]">Smart Pass</p>
           </div>
         </a>
 

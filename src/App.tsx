@@ -280,7 +280,7 @@ function App() {
   }
 
   const simulateScan = () => {
-    const nextStudent = scanRoster[scanCount % scanRoster.length]
+    const nextPerson = scanRoster[scanCount % scanRoster.length]
     const status: ScanStatus = scanCount % 2 === 0 ? 'IN' : 'OUT'
     const time = new Date().toLocaleTimeString([], {
       hour: '2-digit',
@@ -288,8 +288,8 @@ function App() {
     })
 
     const record: ScanRecord = {
-      name: nextStudent.name,
-      id: nextStudent.id,
+      name: nextPerson.name,
+      id: nextPerson.id,
       status,
       time,
       gate: status === 'IN' ? 'North Gate' : 'South Exit',
