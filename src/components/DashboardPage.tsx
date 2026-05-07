@@ -6,7 +6,6 @@ import {
   Clock3,
   Fingerprint,
   LayoutDashboard,
-  ScanLine,
   ShieldCheck,
   Users,
 } from 'lucide-react'
@@ -68,8 +67,6 @@ const operationsPanels = [
 ]
 
 function DashboardPage({
-  theme,
-  onToggleTheme,
   onNavigateHome,
   onOpenLogin,
   onOpenRegister,
@@ -78,7 +75,6 @@ function DashboardPage({
   liveScanTotal,
   verifiedEntries,
   accessZones,
-  currentScan,
   scanLog,
 }: DashboardPageProps) {
   const signedInUser = sessionUser ?? {

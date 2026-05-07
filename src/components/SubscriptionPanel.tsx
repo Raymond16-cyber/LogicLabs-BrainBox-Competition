@@ -75,7 +75,7 @@ function SubscriptionPanel() {
 
           return (
             <button
-              key={plan.id}
+              key={plan.id || index}
               type="button"
               onClick={() => setSelectedPlan(plan.id)}
               aria-pressed={isSelected}
